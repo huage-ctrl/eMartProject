@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/midtier/buyer-service/buyer-service.iml" filepath="$PROJECT_DIR$/midtier/buyer-service/buyer-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/eMartProject.iml" filepath="$PROJECT_DIR$/.idea/eMartProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/midtier/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/midtier/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/midtier/midtier.iml" filepath="$PROJECT_DIR$/midtier/midtier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/midtier/seller-service/seller-service.iml" filepath="$PROJECT_DIR$/midtier/seller-service/seller-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/midtier/user-service/user-service.iml" filepath="$PROJECT_DIR$/midtier/user-service/user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/midtier/zuul-server/zuul-server.iml" filepath="$PROJECT_DIR$/midtier/zuul-server/zuul-server.iml" />
+    </modules>
+  </component>
+</project>

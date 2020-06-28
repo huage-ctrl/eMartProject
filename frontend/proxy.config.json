@@ -1,0 +1,29 @@
+{
+  "/apiuser": {
+    "target": "http://localhost:8809/user-service",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/apiuser": ""
+    }
+  },
+  "/apibuyer": {
+    "target": "http://localhost:8809/buyer-service",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/apibuyer": ""
+    }
+  },
+  "/apiseller": {
+    "target": "http://localhost:8809/seller-service",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/apiseller": ""
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <h4>{{title}}</h4>
+    <div class="search-item">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search for any item/Product">
+    </div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+          <th>Item name</th>
+          <th>Category</th>
+          <th>Sub Category</th>
+          <th>Seller</th>
+          <th>Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of itemList | filter:searchText">
+        <td>
+          <a [routerLink]="['/display-item-complete/',item.item_id]" routerLinkActive="active">
+            <img src="{{item.picture}}" class="image" alt="">
+          </a>
+        </td>
+        <td>{{item.item_name}}</td>
+        <td>{{item.category_id}}</td>
+        <td>{{item.subcategory_id}}</td>
+        <td>{{item.seller_id}}</td>
+        <td>{{item.price}}</td>
+<!--        <td>-->
+<!--          <input type="button" value="View Details" routerLink="/display-item-complete"> &nbsp;-->
+<!--        </td>-->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

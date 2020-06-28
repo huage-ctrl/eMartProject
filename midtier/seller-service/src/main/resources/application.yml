@@ -1,0 +1,24 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: seller-service
+  main:
+    banner-mode: off
+  datasource:
+    url: jdbc:mysql://localhost:3306/emart?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  jpa:
+    database: MYSQL
+    show-sql: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      registerWithEureka: true
+      fetchRegistry: true
+#springdoc:
+#  packagesToScan: org.emart.midtier.sellerservice

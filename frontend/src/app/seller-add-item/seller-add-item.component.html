@@ -1,0 +1,68 @@
+<div class="main-header">
+  <span class="header-menu">
+    <a routerLink="/login" routerLinkActive="active">logOut</a>&nbsp;
+  </span>
+</div>
+<h4>{{tile}}</h4>
+<div class="row">
+  <div class="col-md-6">
+    <form #addItemForm="ngForm" (ngSubmit)="onSubmit(addItemForm.value)" novalidate>
+      <table class="table form-group">
+        <td>Category</td>
+        <td>
+          <select ngModel name="category" class="form-control" (change)="getSubCategoryNameByCategory(addItemForm.value.category)">
+            <option value='' disabled selected></option>
+            <option *ngFor="let item of categoryList" [value]="item.category_name">{{item.category_name}}</option>
+          </select>
+        </td>
+        <tr>
+          <td>SubCategory</td>
+          <td>
+            <select ngModel name="subCategory" class="form-control">
+              <option value="" disabled selected></option>
+<!--              <option *ngIf="!addItemForm.value.category" value="" disabled>Please select category first</option>-->
+              <option *ngFor="let item of subCategoryList" [value]="item.category_name">{{item.subCategory_name}}</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Item name</td>
+          <td>
+            <input ngModel name="itemName" class="form-control" placeholder="Item Name" type="text">
+          </td>
+        </tr>
+        <tr class="item">
+          <td>Price</td>
+          <td><input ngModel name="itemPrice" class="form-control" placeholder="Unit Price" type="number"></td>
+        </tr>
+        <tr>
+          <td>No. of Stock Items</td>
+          <td><input ngModel name="stockNumber" class="form-control" placeholder="Item Stock Numbers" type="number"></td>
+        </tr>
+        <tr>
+          <td>Item Description</td>
+          <td>
+            <textarea ngModel name="itemDescription" class="form-control" type="text" placeholder="Item Description" cols="44" rows="4"></textarea>
+          </td>
+
+        </tr>
+        <tr>
+          <td>Remarks</td>
+          <td>
+            <textarea ngModel name="itemRemark" class="form-control" type="text" placeholder="Item Remarks" cols="44" rows="4"></textarea>
+          </td>
+
+        </tr>
+        <tr>
+          <td>ItemImagesUpload</td>
+          <td><input type="file" id="file-0" multiple class="file"></td>
+        </tr>
+      </table>
+      <div class="col-md-2 offset-3">
+        <input type="button" name="submit" value="Add Item" routerLink="/seller-selling-list">
+      </div>
+    </form>
+  </div>
+</div>
+<br>
+

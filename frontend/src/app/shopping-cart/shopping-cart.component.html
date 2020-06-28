@@ -1,0 +1,62 @@
+<div class="main-header">
+  <span class="header-menu">
+    <a routerLink="/shopping-cart" routerLinkActive="active"><img src="../assets/images/cart1.jpg" alt=""></a>
+    <a routerLink="/login" routerLinkActive="active">logOut</a>&nbsp;
+</span>
+</div>
+<h4>{{tile}}</h4>
+<form>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">
+        <label class="input-group">
+        <input type="checkbox" (change)="selectAll()" >
+        </label>
+      </th>
+      <th>ItemInfo</th>
+      <th>unit price</th>
+      <th>Aount</th>
+      <th>SumMoney</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of cartList">
+      <th scope="row">
+        <label class="input-group">
+          <input type="checkbox" [(ngModel)]="item.checked" [ngModelOptions]="{standalone: true}" (change)="totalCal()">
+        </label>
+      </th>
+      <td>{{item.item_name}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.itemNumbers}}</td>
+      <td>{{item.price*item.itemNumbers}}</td>
+      <td>
+        <input type="button" name="edit" value="Edit" class="edit" routerLink="/display-item-complete"> &nbsp;
+        <input type="button" name="delete" value="Delete" class="delete" (click)="deleteItem(itemId)" > &nbsp;
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</form>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <ul>
+        <li>Total Price : 15000</li>
+      </ul>
+    </div>
+    <div>
+      <input type="button" value="Checkout" />
+    </div>
+  </div>
+  <div>
+  <a routerLink="/display-item-summary" routerLinkActive="active">Back to Search</a>&nbsp;
+  </div>
+</div>
+
+
+

@@ -1,0 +1,41 @@
+<div class="main-header">
+  <span class="header-menu">
+    <a routerLink="/login" routerLinkActive="active">logOut</a>&nbsp;
+  </span>
+</div>
+<h4>{{tile}}</h4>
+<form>
+  <div class="row">
+    <div class="btn">
+      <input type="button" name="submit" value=" Add Item" routerLink="/seller-add-item">
+    </div>
+    <div class="btn">
+      <input type="button" name="Reports" value="Reports">
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th >Category</th>
+      <th >SubCategory</th>
+      <th >ItemName</th>
+      <th >Price</th>
+      <th >ItemStock</th>
+      <th >Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of soldList">
+      <td>{{item.category_id}}</td>
+      <td>{{item.subcategory_id}}</td>
+      <td>{{item.item_name}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.stock_num}}</td>
+      <td>
+        <input type="button" value=" View " [routerLink]="['/seller-update-stock/',item.item_id]"/>
+        <input type="button" value="Delete"/>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</form>

@@ -1,0 +1,39 @@
+<div class="main-header">
+  <span class="header-menu">
+    <a routerLink="/shopping-cart" routerLinkActive="active">
+      <img src="../assets/images/cart1.jpg" alt="">
+    </a>
+    <a routerLink="/login" routerLinkActive="active">logOut</a>&nbsp;
+</span>
+</div>
+<h4>Purchase History</h4>
+<form>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th scope="col">BuyerName</th>
+      <th scope="col">SellerName</th>
+      <th scope="col">ItmeName</th>
+      <th scope="col">NumberOfItmes</th>
+      <th scope="col">DateTime</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of purchaseList">
+<!--      <th scope="row"><input type="checkbox" [(ngModel)]="item.checked" [ngModelOptions]="{standalone: true}"></th>-->
+      <td>{{item.id}}  </td>
+      <td>{{item.buyerId}}</td>
+      <td>{{item.sellerId}}</td>
+      <td>{{item.itemname}}</td>
+      <td>{{item.numberOfItem}}</td>
+      <td>{{item.DataTime}}</td>
+      <td>
+        <input type="button" value="View" [routerLink]="['/display-item-complete/',item.id]"/>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</form>
+<a routerLink="/display-item-summary" routerLinkActive="active">Back to Search</a>&nbsp;
