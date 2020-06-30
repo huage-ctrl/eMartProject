@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="user-service" />
         <module name="eureka-server" />
+        <module name="config-server" />
         <module name="zuul-server" />
         <module name="buyer-service" />
         <module name="seller-service" />
@@ -17,6 +18,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="buyer-service" target="1.8" />
+      <module name="config-server" target="1.8" />
       <module name="config-service" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="gateway-server" target="1.8" />
@@ -30,6 +32,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="buyer-service" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="config-service" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />

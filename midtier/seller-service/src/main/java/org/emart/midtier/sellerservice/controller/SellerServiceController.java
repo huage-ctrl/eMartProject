@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
+@CrossOrigin
 @RestController
+@RequestMapping(value = "/seller")
 public class SellerServiceController {
     final SellerService sellerService;
     @Autowired

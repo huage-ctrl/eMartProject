@@ -20,15 +20,15 @@ zuul:
 #  servlet-path: /
   routes:
     buyer-service:
-      path: /buyer-service/**
-      service-id: app-buyer
+      path: /buyer/**
+      service-id: buyer-service
       strip-prefix: false
     seller-service:
-      path: /seller-service/**
-      service-id: app-seller
+      path: /seller/**
+      service-id: seller-service
       strip-prefix: false
     user-service:
-      path: /user-service/**
-      service-id: app-user
+      path: /user/**
+      service-id: user-service
       strip-prefix: false
 

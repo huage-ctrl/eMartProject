@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/midtier/buyer-service/buyer-service.iml" filepath="$PROJECT_DIR$/midtier/buyer-service/buyer-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/midtier/config-server/config-server.iml" filepath="$PROJECT_DIR$/midtier/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/eMartProject.iml" filepath="$PROJECT_DIR$/.idea/eMartProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/midtier/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/midtier/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/midtier/midtier.iml" filepath="$PROJECT_DIR$/midtier/midtier.iml" />

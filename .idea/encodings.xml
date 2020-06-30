@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/midtier/buyer-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/midtier/config-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/midtier/eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/midtier/seller-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/midtier/user-service/src/main/java" charset="UTF-8" />

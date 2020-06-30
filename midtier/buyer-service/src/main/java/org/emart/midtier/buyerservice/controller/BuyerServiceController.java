@@ -11,6 +11,7 @@ import java.util.List;
 
 @EnableEurekaClient
 @RestController
+@RequestMapping(value = "/buyer")
 public class BuyerServiceController {
     final BuyerService buyerService;
     @Autowired
