@@ -2,10 +2,11 @@ package org.emart.midtier.buyerservice.service;
 
 import org.emart.midtier.buyerservice.client.ItemsFeignClient;
 import org.emart.midtier.buyerservice.entity.Cart;
+import org.emart.midtier.buyerservice.entity.Item;
 import org.emart.midtier.buyerservice.entity.PurchaseHistory;
 import org.emart.midtier.buyerservice.repository.CartRepository;
 import org.emart.midtier.buyerservice.repository.PurchaseHistoryRepository;
-import org.emart.midtier.sellerservice.entity.Item;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -36,7 +37,7 @@ public class BuyerService {
         cartRepository.delete(cart);
     }
 
-    public List<Cart> listCarts(String buyerId) {
+    public List<Cart> listCarts(Long buyerId) {
         return this.cartRepository.findCartsByBuyerId(buyerId);
     }
 

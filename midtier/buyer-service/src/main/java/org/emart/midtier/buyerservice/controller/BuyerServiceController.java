@@ -1,9 +1,9 @@
 package org.emart.midtier.buyerservice.controller;
 
 import org.emart.midtier.buyerservice.entity.Cart;
+import org.emart.midtier.buyerservice.entity.Item;
 import org.emart.midtier.buyerservice.entity.PurchaseHistory;
 import org.emart.midtier.buyerservice.service.BuyerService;
-import org.emart.midtier.sellerservice.entity.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.*;
@@ -34,8 +34,8 @@ public class BuyerServiceController {
     }
 
     @GetMapping(value = "/listCarts/{buyer_id}")
-    public List<Cart> listCarts(@PathVariable("buyer_id") String buyer_id) {
-        return  this.buyerService.listCarts(buyer_id);
+    public List<Cart> listCarts(@PathVariable("buyer_id") Long buyerId) {
+        return  this.buyerService.listCarts(buyerId);
     }
 
     @GetMapping(value = "/deleteCart")

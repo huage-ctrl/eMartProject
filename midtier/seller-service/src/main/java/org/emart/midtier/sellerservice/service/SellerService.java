@@ -35,7 +35,7 @@ public class SellerService {
         return this.itemRepository.findItemsByItemName(itemName);
     }
 
-    public List<Item> findItemsBySellerId(String sellerId) {
+    public List<Item> findItemsBySellerId(Long sellerId) {
         return this.itemRepository.findItemsBySellerId(sellerId);
     }
 

@@ -18,6 +18,6 @@ import java.util.Map;
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Long> {
 
-   List<Item>findItemsByItemName(String itemName);
-    List<Item> findItemsBySellerId(String sellerId);
+    List<Item>findItemsByItemName(String itemName);
+    List<Item> findItemsBySellerId(Long sellerId);
 }

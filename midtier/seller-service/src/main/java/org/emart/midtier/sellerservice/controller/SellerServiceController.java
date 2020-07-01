@@ -42,7 +42,7 @@ public class SellerServiceController {
     }
 
     @GetMapping("/itemListBySeller/{seller_id}")
-    public List<Item> getItemListBySeller(@PathVariable("seller_id") String sellerId) {
+    public List<Item> getItemListBySeller(@PathVariable("seller_id") Long sellerId) {
         return  sellerService.findItemsBySellerId(sellerId);
     }
 
